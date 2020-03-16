@@ -1,0 +1,7 @@
+Hosting environment: Production
+Content root path: E:\詹宝华学习备份\OpenAuth.Core\OpenAuth.Mvc\bin\Debug\netcoreapp2.1\publish
+Now listening on: http://127.0.0.1:12320
+Application started. Press Ctrl+C to shut down.
+warn: Microsoft.EntityFrameworkCore.Model.Validation[30000]
+      No type was specified for the decimal column 'Price' on entity type 'Stock'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'.
+Application is shutting down...

@@ -1,0 +1,8 @@
+2019-03-04 20:51:54,810 [1] WARN  Microsoft.AspNetCore.DataProtection.Repositories.EphemeralXmlRepository - Using an in-memory repository. Keys will not be persisted to storage.
+2019-03-04 20:51:54,855 [1] WARN  Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2019-03-04 20:51:54,871 [1] WARN  Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - No XML encryptor configured. Key {4e572bbc-8305-43ae-b933-2b3a08da9366} may be persisted to storage in unencrypted form.
+Hosting environment: Production
+Content root path: E:\詹宝华学习备份\OpenAuth.Core\OpenAuth.WebApi\bin\Debug\netcoreapp2.1\publish
+Now listening on: http://127.0.0.1:2372
+Application started. Press Ctrl+C to shut down.
+Application is shutting down...

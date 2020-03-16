@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OpenAuth.WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:OpenAuth.WebApi.Controllers.AccessObjsController.Assign(OpenAuth.App.Request.AssignReq)">
+            <summary>
+            比如给用户分配资源，那么firstId就是用户ID，secIds就是资源ID列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OpenAuth.WebApi.Controllers.AccessObjsController.AssignDataProperty(OpenAuth.App.Request.AssignDataReq)">
+            <summary>
+            角色分配数据字段权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OpenAuth.WebApi.Controllers.AccessObjsController.UnAssignDataProperty(OpenAuth.App.Request.AssignDataReq)">
+            <summary>
+            取消角色的数据字段权限
+            <para>如果Properties为空，则把角色的某一个模块权限全部删除</para>
+            <para>如果moduleId为空，直接把角色的所有授权删除</para>
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:OpenAuth.WebApi.Controllers.ApplicationsController">
+            <summary>
+            应用列表
+            </summary>
+        </member>
+        <member name="T:OpenAuth.WebApi.Controllers.CategorysController">
+            <summary>
+            Category操作
+            </summary>
+        </member>
+        <member name="M:OpenAuth.WebApi.Controllers.CategorysController.Load(OpenAuth.App.Request.QueryCategoryListReq)">
+            <summary>
+            加载列表
+            </summary>
+        </member>
+        <member name="M:OpenAuth.WebApi.Controllers.CategorysController.Delete(System.String[])">
+            <summary>
+            批量删除
+            </summary>
+        </member>
+        <member name="T:OpenAuth.WebApi.Controllers.CheckController">
+            <inheritdoc />
+            <summary>
+            登录及与登录相关的接口
+            </summary>
+        </member>
+        <member name="M:OpenAuth.WebApi.Controllers.CheckController.GetStatus">
+            <summary>
+            检验token是否有效
+            </summary>
+            <param name="token">The token.</param>
+            <param name="requestid">备用参数.</param>
+        </member>
+        <member name="M:OpenAuth.WebApi.Controllers.CheckController.GetProperties(System.String)">
+            <summary>
+            获取当前登录用户可访问的字段
+            </summary>
+            <param name="moduleCode">模块的Code，如Category</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenAuth.WebApi.Controllers.CheckController.GetSubOrgs(System.String)">
+            <summary>
+            加载机构的全部下级机构
+            </summary>
+            <param name="orgId">机构ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenAuth.WebApi.Controllers.CheckController.GetModules">
+            <summary>
+            获取登录用户的所有可访问的模块及菜单，以列表形式返回结果
+            </summary>
+        </member>
+        <member name="M:OpenAuth.WebApi.Controllers.CheckController.GetModulesTree">
+            <summary>
+            获取登录用户的所有可访问的模块及菜单，以树状结构返回
+            </summary>
+        </member>
+        <member name="M:OpenAuth.WebApi.Controllers.CheckController.GetUserName">
+            <summary>
+            根据token获取用户名称
+            </summary>
+        </member>
+        <member name="M:OpenAuth.WebApi.Controllers.CheckController.Login(OpenAuth.App.SSO.PassportLoginRequest)">
+            <summary>
+            登录接口
+            </summary>
+            <param name="request">登录参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenAuth.WebApi.Controllers.CheckController.Logout">
+            <summary>
+            注销登录
+            </summary>
+            <param name="token"></param>
+            <param name="requestid">备用参数.</param>
+        </member>
+        <member name="T:OpenAuth.WebApi.Controllers.FlowInstancesController">
+            <summary>
+            流程实例
+            </summary>
+        </member>
+        <member name="M:OpenAuth.WebApi.Controllers.FlowInstancesController.Load(OpenAuth.App.Request.QueryFlowInstanceListReq)">
+            <summary>
+            加载列表
+            </summary>
+        </member>
+        <member name="T:OpenAuth.WebApi.Controllers.FlowSchemesController">
+            <summary>
+            表单操作
+            </summary>
+        </member>
+        <member name="M:OpenAuth.WebApi.Controllers.FlowSchemesController.Load(OpenAuth.App.Request.QueryFlowSchemeListReq)">
+            <summary>
+            加载列表
+            </summary>
+        </member>
+        <member name="T:OpenAuth.WebApi.Controllers.FormsController">
+            <summary>
+            表单操作
+            </summary>
+        </member>
+        <member name="M:OpenAuth.WebApi.Controllers.FormsController.Load(OpenAuth.App.Request.QueryFormListReq)">
+            <summary>
+            加载列表
+            </summary>
+        </member>
+        <member name="M:OpenAuth.WebApi.Controllers.ModulesController.LoadForRole(System.String)">
+            <summary>
+            加载角色模块
+            </summary>
+            <param name="firstId">The role identifier.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:OpenAuth.WebApi.Controllers.ModulesController.LoadMenusForRole(System.String,System.String)">
+            <summary>
+            根据某角色ID获取可访问某模块的菜单项
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OpenAuth.WebApi.Controllers.ModulesController.LoadPropertiesForRole(System.String,System.String)">
+            <summary>
+            获取角色已经分配的字段
+            </summary>
+            <param name="roleId">角色id</param>
+            <param name="moduleCode">模块代码，如Category</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenAuth.WebApi.Controllers.ModulesController.LoadMenus(System.String)">
+            <summary>
+            获取发起页面的菜单权限
+            </summary>
+            <returns>System.String.</returns>
+        </member>
+        <member name="T:OpenAuth.WebApi.Controllers.OrgsController">
+            <summary>
+            机构操作
+            </summary>
+        </member>
+        <member name="M:OpenAuth.WebApi.Controllers.ResourcesController.LoadForRole(System.String,System.String)">
+            <summary>
+            加载角色资源
+            </summary>
+            <param name="appId">应用ID</param>
+            <param name="firstId">角色ID</param>
+        </member>
+        <member name="T:OpenAuth.WebApi.Controllers.RolesController">
+            <summary>
+            表单操作
+            </summary>
+        </member>
+        <member name="M:OpenAuth.WebApi.Controllers.RolesController.Load(OpenAuth.App.Request.QueryRoleListReq)">
+            <summary>
+            加载列表
+            </summary>
+        </member>
+        <member name="M:OpenAuth.WebApi.Controllers.RolesController.LoadForUser(System.String)">
+            <summary>
+            加载用户的角色
+            </summary>
+        </member>
+        <member name="T:OpenAuth.WebApi.Controllers.UsersController">
+            <summary>
+            用户操作
+            </summary>
+        </member>
+        <member name="M:OpenAuth.WebApi.Controllers.UsersController.Load(OpenAuth.App.Request.QueryUserListReq)">
+            <summary>
+            加载列表
+            </summary>
+        </member>
+    </members>
+</doc>
